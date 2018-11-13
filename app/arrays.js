@@ -28,7 +28,14 @@ exports.arraysAnswers = {
   },
 
   removeWithoutCopy: function(arr, item) {
-
+    let answer = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] !== item) {
+        answer.push(arr[i])
+      }
+    }
+    arr = answer;
+    return arr;
   },
 
   append: function(arr, item) {
