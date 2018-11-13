@@ -32,6 +32,8 @@ describe('arrays', function() {
     a.splice( 1, 0, 2 );
     a.push( 2 );
     a.push( 2 );
+    
+    let expected = [1, 3, 4];
 
     var result = arraysAnswers.removeWithoutCopy(a, 2);
 
@@ -39,7 +41,7 @@ describe('arrays', function() {
     expect(result.join(' ')).to.eql('1 3 4');
 
     // make sure that you return the same array instance
-    expect(result).equal(a);
+    expect(result).equal(expected);
   });
 
   it('you should be able to add an item to the end of an array', function() {
